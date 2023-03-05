@@ -47,8 +47,10 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
     if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
         alert("All fields are required!"); //if pilot, copilot, fuelLevel, or cargoLevel input is empty alert "All fields are required!"
+    
     } else if (validateInput(pilot) === "Is a Number" || validateInput(copilot) === "Is a Number" || validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel) === "Not a Number" ) {
         alert("Make sure to enter valid information for each field!"); //else if pilot/copilot is a number or fuelLevel/cargoLevel is not a number alert "Make sure to enter valid information for each field!"
+    
     } else { //else all fields filled with valid info...
         list.style.visibility = "visible"; //visible (list.style.visibility is using CSS id selector #faultyItems from styles.css) 
         pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`; //pilotStatus.innerHTML reads and updates temp lit for pilot
@@ -80,9 +82,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
 
  async function myFetch() {
-    let planetsReturned;
-
-    planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
+    let planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
             if (response.status >= 400) { //if response status greater than or equal to 400 
                 throw new Error ("Bad response"); //throw error "Bad response"
             }
