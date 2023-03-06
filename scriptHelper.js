@@ -45,10 +45,10 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let fuel = document.getElementById("fuelStatus"); //element from index.html
     let cargo = document.getElementById("cargoStatus"); //element from index.html
 
-    console.log(pilotStatus);
-    console.log(copilotStatus);
-    console.log(fuel);
-    console.log(cargo);
+    // console.log(pilotStatus);
+    // console.log(copilotStatus);
+    // console.log(fuel);
+    // console.log(cargo);
 
     if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
         alert("All fields are required!"); //if pilot, copilot, fuelLevel, or cargoLevel input is empty alert "All fields are required!"
@@ -56,7 +56,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     } else if (validateInput(pilot) === "Is a Number" || validateInput(copilot) === "Is a Number" || validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel) === "Not a Number" ) {
         alert("Make sure to enter valid information for each field!"); //else if pilot/copilot is a number or fuelLevel/cargoLevel is not a number alert "Make sure to enter valid information for each field!"
     
-    } else { //else all fields filled with valid info...
+    } else { //else all fields filled with valid info types...
         list.style.visibility = "visible"; //visible (list.style.visibility is using CSS id selector #faultyItems from styles.css) 
         pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`; //pilotStatus.innerHTML reads and updates temp lit for pilot
         copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`; //copilotStatus.innerHTML reads and updates temp lit for copilot
@@ -83,8 +83,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
             launchStatus.style.color = "#419F6A"; //green color
         }
     }
-    let button = document.getElementById("formSubmit");
-    button.addEventListener("click", formSubmission);
+    // let button = document.getElementById("formSubmit");
+    // button.addEventListener("click", formSubmission);
  }
 
 
