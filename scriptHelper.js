@@ -78,6 +78,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
             launchStatus.style.color = "#419F6A"; //green color
         }
     }
+    let button = document.getElementById("formSubmit");
+    button.addEventListener("click", formSubmission);
  }
 
 
