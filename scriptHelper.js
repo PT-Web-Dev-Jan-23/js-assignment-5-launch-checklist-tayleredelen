@@ -84,7 +84,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
 
  async function myFetch() {
-    let planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
+    let planetsReturned = await myFetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
             if (response.status >= 400) { //if response status greater than or equal to 400 
                 throw new Error ("Bad response"); //throw error "Bad response"
             }
