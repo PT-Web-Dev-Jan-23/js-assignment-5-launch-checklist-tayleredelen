@@ -17,6 +17,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
                  `;
  }
 
+ 
 //validateInput() should take in string as parameter and return empty, not a number, or is a number. 
 function validateInput(testInput) {
     let numberInput = Number(testInput); //take input and convert to number
